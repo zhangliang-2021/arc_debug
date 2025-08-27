@@ -1,0 +1,16 @@
+name: Manual Action
+
+on:
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  getenv-job:
+    runs-on: arc-debug-runner-set
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+    
+      - name: Run a Sample Command # 第二步：运行一个示例命令
+        run: |
+          echo "Hello from line 1"
+          echo "Hello from line 2"
