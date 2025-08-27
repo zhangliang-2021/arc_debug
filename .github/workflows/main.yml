@@ -4,7 +4,7 @@ on:
   workflow_dispatch:  # 允许手动触发
 
 jobs:
-  getenv-job:
+  test-job:
     runs-on: arc-debug-runner-set
     steps:
       - name: Checkout repository
