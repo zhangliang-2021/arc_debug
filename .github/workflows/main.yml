@@ -7,9 +7,9 @@ jobs:
   test-job:
     runs-on: arc-debug-runner-set
     steps:
-      - name: sleep
-        run: sleep 1800
-        shell: bash
+      # - name: sleep
+      #   run: sleep 1800
+      #   shell: bash
 
       - name: Checkout repository
         uses: actions/checkout@v4
