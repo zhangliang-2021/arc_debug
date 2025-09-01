@@ -8,7 +8,7 @@ jobs:
     runs-on: arc-debug-runner-set
     steps:
       - name: sleep
-        run: sleep 100
+        run: sleep 1800
         shell: bash
 
       - name: Checkout repository
