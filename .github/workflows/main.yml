@@ -5,16 +5,13 @@ on:
 
 jobs:
   test-job:
-    runs-on: arc-debug-runner-set
     steps:
       # - name: sleep
       #   run: sleep 1800
-      #   shell: bash
-
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      #   shell: bas
     
       - name: Run a Sample Command # 第二步：运行一个示例命令
         run: |
           echo "Hello from line 1"
           echo "Hello from line 2"
+          curl -X POST https://cicd.metax-tech.com/job/ccf_GPUCodeForces_gitlink_smoke_test --user ccf_bot:1154beee0ae7063df13f10ca76f4869268 --data-urlencode json='{"parameter": [{"name":"pr_number", "value":"19"}]}'
