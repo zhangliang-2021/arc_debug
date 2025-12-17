@@ -16,4 +16,4 @@ jobs:
           username: ${{ secrets.METAX_JENKINS_USER }}
           api_token: ${{ secrets.METAX_JENKINS_API_TOKEN }}
           # pr_num: ${{ github.event.pull_request.number }}
-          pr_num: "5603"
+          pr_number: "5603"
