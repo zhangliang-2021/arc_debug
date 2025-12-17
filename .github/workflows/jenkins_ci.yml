@@ -2,6 +2,8 @@ name: Jenkins CI
 
 on:
   workflow_dispatch:  # 允许手动触发
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   test-job:
