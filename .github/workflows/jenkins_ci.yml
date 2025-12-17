@@ -8,14 +8,11 @@ on:
 jobs:
   test-job:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6.0.1
-    
+    steps:    
       - name: Trigger jenkins job 
         uses: zhangliang-2021/simple-jenkins-githubaction@main
         with:
           job_name: paddle_fastdeploy_metax_smoketest
           username: ${{ secrets.METAX_JENKINS_USER }}
           api_token: ${{ secrets.METAX_JENKINS_API_TOKEN }}
-          pr_num: "5603"
+          pr_num: ${{ github.event.pull_request.number }}
