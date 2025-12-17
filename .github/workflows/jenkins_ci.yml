@@ -17,3 +17,4 @@ jobs:
           api_token: ${{ secrets.METAX_JENKINS_API_TOKEN }}
           # pr_num: ${{ github.event.pull_request.number }}
           pr_number: "5603"
+          project_branch: "develop"
